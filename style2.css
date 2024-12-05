@@ -1,0 +1,35 @@
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Two rows: one for header, one for the split section */
+    grid-template-columns: 4fr 1fr; /* Two columns for the bottom section */
+    grid-template-areas:
+        "header header" /* Header spans full width */
+        "left right";   /* Two sections below split in half */
+    gap: 10px; /* Optional: Space between cells */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Grid Items */
+.header {
+    grid-area: header; /* Full-width header */
+    background-color: #f5a9f1; /* Placeholder background */
+}
+
+.left {
+    grid-area: left; /* Left cell */
+    background: rgb(255,130,235);
+    background: radial-gradient(circle, rgba(255,130,235,1) 0%, rgba(200,161,245,1) 75%, rgba(67,87,255,1) 100%);
+}
+.right {
+    grid-area: right; /* Right cell */
+    background-color: #ca8ff1; /* Placeholder background */
+}
+
+.right-aligned{
+    text-align: right;
+}
+
+h4 {
+    font-weight: 200;
+}
